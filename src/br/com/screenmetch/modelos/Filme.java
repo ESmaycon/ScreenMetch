@@ -1,6 +1,8 @@
 package br.com.screenmetch.modelos;
 
-public class Filme extends Titulo {
+import br.com.screenmetch.calculadora.Classificavel;
+
+public class Filme extends Titulo implements Classificavel {
     private String diretor;
 
     public String getDiretor(){
@@ -9,5 +11,10 @@ public class Filme extends Titulo {
 
     public void setDiretor(String diretor){
             this.diretor = diretor;
+    }
+
+    @Override
+    public int getClassificacao() {
+        return (int) pegarMedia()/2;
     }
 }

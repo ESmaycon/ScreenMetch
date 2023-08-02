@@ -1,5 +1,6 @@
 import br.com.screenmetch.calculadora.CalculadoraDeTempo;
-    import br.com.screenmetch.modelos.Filme;
+import br.com.screenmetch.calculadora.FiltroRecomendacao;
+import br.com.screenmetch.modelos.Filme;
 import br.com.screenmetch.modelos.Serie;
 import java.util.Scanner;
 
@@ -37,5 +38,7 @@ public class Main {
         calculadora.inclui(meuFilme);
         System.out.println("O tempo total para ver esses 2 Titulos são:"+ calculadora.getTempoTotal());
 
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
     }
 }
