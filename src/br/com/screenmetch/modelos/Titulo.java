@@ -44,7 +44,7 @@ public class Titulo {
         this.duracaoEmMinitos = duracaoEmMinitos;
     }
 
-    public void exibeFichaTecnica(){
+    public void exibeFichaTecnica(){    
         System.out.println("Nome do br.com.screenmetch.modelos.Filme: "+nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
         System.out.println("Duração do filme: " + duracaoEmMinitos +"min");
