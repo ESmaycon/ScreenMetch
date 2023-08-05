@@ -4,10 +4,7 @@ import br.com.screenmetch.modelos.Filme;
 import br.com.screenmetch.modelos.Serie;
 import br.com.screenmetch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class NewMain {
     public static void main(String[] args) {
@@ -34,7 +31,7 @@ public class NewMain {
 
         }
 
-        ArrayList<String> buscarPorArtista = new ArrayList<>();
+        List<String> buscarPorArtista = new LinkedList<>();
         buscarPorArtista.add("Leleco");
         buscarPorArtista.add("Fuleco");
         buscarPorArtista.add("Beltrano");
