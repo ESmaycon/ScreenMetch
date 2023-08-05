@@ -1,3 +1,5 @@
+package br.com.screenmetch.principal;
+
 import br.com.screenmetch.calculadora.CalculadoraDeTempo;
 import br.com.screenmetch.calculadora.FiltroRecomendacao;
 import br.com.screenmetch.modelos.Filme;
@@ -9,9 +11,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
        // Scanner leitor = new Scanner(System.in);
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("Sonic");
-        meuFilme.setAnoDeLancamento(2022);
+        Filme meuFilme = new Filme("Sonic", 2022);
         meuFilme.setDuracaoEmMinitos(180);
         meuFilme.setTipoConta(true);
 
@@ -25,10 +25,7 @@ public class Main {
 
         System.out.println("Média de avaliações do filme: " + meuFilme.pegarMedia());
 
-        Serie lost = new Serie();
-
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.exibeFichaTecnica();
         lost.setNumeroDeEpisodios(10);
         lost.setNumeroDeTemporadas(15);
@@ -43,9 +40,7 @@ public class Main {
         FiltroRecomendacao filtro = new FiltroRecomendacao();
         filtro.filtra(meuFilme);
 
-        var novoFilme = new Filme();
-        novoFilme.setNome("Vingadores:");
-        novoFilme.setAnoDeLancamento(2022);
+        var novoFilme = new Filme("Vingadores", 2022);
 
         ArrayList<Filme> meusFilmes = new ArrayList<>();
         meusFilmes.add(meuFilme);

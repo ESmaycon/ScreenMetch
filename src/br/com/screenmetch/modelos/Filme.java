@@ -1,9 +1,12 @@
 package br.com.screenmetch.modelos;
-
 import br.com.screenmetch.calculadora.Classificavel;
 
 public class Filme extends Titulo implements Classificavel {
     private String diretor;
+
+    public Filme(String nome, int anoDeLancamento) {
+       super(nome, anoDeLancamento);
+    }
 
     public String getDiretor(){
         return diretor;
@@ -22,4 +25,5 @@ public class Filme extends Titulo implements Classificavel {
     public String toString() {
         return "Filme: " + this.getNome() + "(" + this.getAnoDeLancamento() + ")";
     }
+
 }

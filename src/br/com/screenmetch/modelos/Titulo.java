@@ -1,6 +1,6 @@
 package br.com.screenmetch.modelos;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo>{
     private String nome;
     private int anoDeLancamento;
     private boolean tipoConta;
@@ -8,6 +8,10 @@ public class Titulo {
     private int quatidadeAvaliacao;
     private int duracaoEmMinitos;
 
+    public Titulo (String nome, int anoDeLancamento){
+        setNome(nome);
+        setAnoDeLancamento(anoDeLancamento);
+    }
     public int getQuatidadeAvaliacao() {
         return quatidadeAvaliacao;
     }
@@ -44,7 +48,7 @@ public class Titulo {
         this.duracaoEmMinitos = duracaoEmMinitos;
     }
 
-    public void exibeFichaTecnica(){    
+    public void exibeFichaTecnica(){
         System.out.println("Nome do br.com.screenmetch.modelos.Filme: "+nome);
         System.out.println("Ano de lançamento: " + anoDeLancamento);
         System.out.println("Duração do filme: " + duracaoEmMinitos +"min");
@@ -59,4 +63,9 @@ public class Titulo {
     public double pegarMedia(){
         return somaDasAvaliacao / quatidadeAvaliacao;
     }
+    @Override
+    public int compareTo(Titulo outroTitulo) {
+        return this.getNome().compareTo(outroTitulo.getNome());
+    }
+
 }
