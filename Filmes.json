@@ -1,0 +1,18 @@
+[
+  {
+    "Title": "Matrix",
+    "Year": 1993,
+    "TipoConta": false,
+    "SomaDasAvaliacao": 0.0,
+    "QuatidadeAvaliacao": 0,
+    "DuracaoEmMinitos": 60
+  },
+  {
+    "Title": "Spider-Man",
+    "Year": 2002,
+    "TipoConta": false,
+    "SomaDasAvaliacao": 0.0,
+    "QuatidadeAvaliacao": 0,
+    "DuracaoEmMinitos": 12
+  }
+]
