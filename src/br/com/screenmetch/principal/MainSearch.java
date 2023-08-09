@@ -20,7 +20,7 @@ public class MainSearch {
         Scanner leitura = new Scanner(System.in);
         System.out.println("Qual Título deseja buscar? ");
         var busca = leitura.nextLine();
-
+        try {
         String chave = "78b521f";
         String endereco = "https://www.omdbapi.com/?t="+ busca +"&apikey="+ chave;
         HttpClient client = HttpClient.newHttpClient();
@@ -37,16 +37,18 @@ public class MainSearch {
         Gson gson = new GsonBuilder()
                 .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
                 .create();
-       //Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+        //Titulo meuTitulo = gson.fromJson(json, Titulo.class);
         TituloOmdb meuTituloOmdb = gson.fromJson(json,TituloOmdb.class) ;
         System.out.println(meuTituloOmdb);
 
-        try {
             Titulo meuTitulo = new Titulo(meuTituloOmdb);
             System.out.println(meuTitulo);
         } catch (NumberFormatException e){
             System.out.println("ERRO: " + e.getMessage());
-        }finally {
+        } catch (IllegalArgumentException e){
+            System.out.println("Erro: " + e.getMessage());
+        }
+        finally {
             System.out.println("Finalizado...");
         }
 
