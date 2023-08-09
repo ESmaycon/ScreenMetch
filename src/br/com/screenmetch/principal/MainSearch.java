@@ -1,5 +1,6 @@
 package br.com.screenmetch.principal;
 
+import br.com.screenmetch.excecao.ErroDeConversaoAnoExeption;
 import br.com.screenmetch.modelos.Titulo;
 import br.com.screenmetch.modelos.TituloOmdb;
 import com.google.gson.FieldNamingPolicy;
@@ -47,6 +48,8 @@ public class MainSearch {
             System.out.println("ERRO: " + e.getMessage());
         } catch (IllegalArgumentException e){
             System.out.println("Erro: " + e.getMessage());
+        } catch (ErroDeConversaoAnoExeption e){
+            System.out.println(e.getMessage());
         }
         finally {
             System.out.println("Finalizado...");
